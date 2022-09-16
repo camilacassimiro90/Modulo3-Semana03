@@ -1752,11 +1752,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "\\\\servidor\\dados\\OneDrive\\Camila\\Senai-Curso\\Modulo3\\Semana03\\RH\\RH.csproj",
+      "projectUniqueName": "\\\\servidor\\dados\\OneDrive\\Camila\\Senai-Curso\\Modulo3\\Semana03\\Modulo3-Semana03\\RH.csproj",
       "projectName": "RH",
-      "projectPath": "\\\\servidor\\dados\\OneDrive\\Camila\\Senai-Curso\\Modulo3\\Semana03\\RH\\RH.csproj",
+      "projectPath": "\\\\servidor\\dados\\OneDrive\\Camila\\Senai-Curso\\Modulo3\\Semana03\\Modulo3-Semana03\\RH.csproj",
       "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
-      "outputPath": "\\\\servidor\\dados\\OneDrive\\Camila\\Senai-Curso\\Modulo3\\Semana03\\RH\\obj\\",
+      "outputPath": "\\\\servidor\\dados\\OneDrive\\Camila\\Senai-Curso\\Modulo3\\Semana03\\Modulo3-Semana03\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config"

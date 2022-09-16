@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Dfjv38BBXHCJ0DfrgZacWREU5ti1bW3k3O7CxwcPOuxK3B02X3JBzrmmh9I7/w0q6YPgoQk2ndoT7XYHBXrMIg==",
+  "dgSpecHash": "k8ZpBAspCDRuqtmtv+0ERLp9oiN/qFCXJEjZmlBrLNczDmC73TRCTg0AqpmJuc2hFexqyATE+S7VJsDeZIJeXA==",
   "success": true,
-  "projectFilePath": "\\\\servidor\\dados\\OneDrive\\Camila\\Senai-Curso\\Modulo3\\Semana03\\RH\\RH.csproj",
+  "projectFilePath": "\\\\servidor\\dados\\OneDrive\\Camila\\Senai-Curso\\Modulo3\\Semana03\\Modulo3-Semana03\\RH.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Usuario\\.nuget\\packages\\microsoft.aspnetcore.authentication\\2.2.0\\microsoft.aspnetcore.authentication.2.2.0.nupkg.sha512",
     "C:\\Users\\Usuario\\.nuget\\packages\\microsoft.aspnetcore.authentication.abstractions\\2.2.0\\microsoft.aspnetcore.authentication.abstractions.2.2.0.nupkg.sha512",
