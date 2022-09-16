@@ -47,7 +47,7 @@ namespace RH.Repositories
       funcionarioEd.Update(funcionario);
     }
 
-    public void Remover(Funcionario funcionario)
+    public void Excluir(Funcionario funcionario)
     {
       funcionarioLista.RemoveAll(f => f.Id == funcionario.Id);
     }
