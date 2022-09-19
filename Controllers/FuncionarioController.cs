@@ -56,6 +56,19 @@ namespace RH.Controller
       return NoContent();
     }
 
+    //   [Authorize(Roles = "Gerente")]
+    //   [HttpPut("alterar-salario/{id}")]
+    //   public IActionResult AlterarSalario(
+    //      [FromRoute] string id,
+    //      [FromBody] FuncionarioDto salario
+    //  )
+    //   {
+    //     var funcionario = FuncionarioRepository.ObterPorId(id);
+    //     funcionario.Salario = salario.Salario;
+    //     FuncionarioRepository.Editar(funcionario);
+    //     return Ok();
+    //   }
+
 
 
   }
