@@ -50,9 +50,10 @@ namespace RH.Repositories
       funcionarioEd.Update(funcionario);
     }
 
-    public void Excluir(Funcionario funcionario)
+    public static void Excluir(Funcionario funcionario)
     {
-      funcionarioLista.RemoveAll(f => f.Id == funcionario.Id);
+      var funcionario1 = ObterPorId(funcionario.Id);
+      funcionarioLista.Remove(funcionario1);
     }
 
 

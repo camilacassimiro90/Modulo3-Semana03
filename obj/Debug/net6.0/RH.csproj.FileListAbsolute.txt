@@ -33,3 +33,6 @@
 \\servidor\dados\OneDrive\Camila\Senai-Curso\Modulo3\Semana03\Modulo3-Semana03\obj\Debug\net6.0\RH.pdb
 \\servidor\dados\OneDrive\Camila\Senai-Curso\Modulo3\Semana03\Modulo3-Semana03\obj\Debug\net6.0\RH.genruntimeconfig.cache
 \\servidor\dados\OneDrive\Camila\Senai-Curso\Modulo3\Semana03\Modulo3-Semana03\obj\Debug\net6.0\ref\RH.dll
+\\servidor\dados\OneDrive\Camila\Senai-Curso\Modulo3\Semana03\Modulo3-Semana03\bin\Debug\net6.0\Microsoft.DotNet.PlatformAbstractions.dll
+\\servidor\dados\OneDrive\Camila\Senai-Curso\Modulo3\Semana03\Modulo3-Semana03\bin\Debug\net6.0\Microsoft.Extensions.DependencyModel.dll
+\\servidor\dados\OneDrive\Camila\Senai-Curso\Modulo3\Semana03\Modulo3-Semana03\bin\Debug\net6.0\Newtonsoft.Json.dll

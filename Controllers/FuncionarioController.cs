@@ -11,9 +11,9 @@ namespace RH.Controller
   [Route("[controller]")]
   public class FuncionarioController : ControllerBase
   {
-    [Authorize(Roles = "Administrador")]
-    [HttpPost("cadastrar-funcionario")]
-    public IActionResult Adicionar([FromBody] Funcionario funcionario)
+
+    [HttpPost]
+    public IActionResult Adicionar([FromBody] FuncionarioDto funcionario)
     {
       var novoFuncionario = new Funcionario
       {
@@ -24,6 +24,12 @@ namespace RH.Controller
 
       FuncionarioRepository.Adicionar(novoFuncionario);
       return StatusCode(StatusCodes.Status201Created);
+    }
+
+    [HttpDelete]
+    public void Excluir(Funcionario funcionario)
+    {
+      FuncionarioRepository.Excluir(funcionario);
     }
 
 
