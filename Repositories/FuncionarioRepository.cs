@@ -35,10 +35,13 @@ namespace RH.Repositories
       return funcionarioLista.FirstOrDefault(f => f.Nome == funcionario.Nome && f.Senha == funcionario.Senha);
     }
 
-    public void Adicionar(Funcionario funcionario)
+    public static Funcionario Adicionar(Funcionario funcionario)
     {
       funcionario.Id = Guid.NewGuid().ToString();
       funcionarioLista.Add(funcionario);
+
+      return funcionario;
+
     }
 
     public void Editar(Funcionario funcionario)
@@ -51,6 +54,7 @@ namespace RH.Repositories
     {
       funcionarioLista.RemoveAll(f => f.Id == funcionario.Id);
     }
+
 
 
 
