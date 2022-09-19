@@ -12,6 +12,13 @@ namespace RH.Controller
   public class FuncionarioController : ControllerBase
   {
 
+    [HttpGet]
+    public IActionResult ObterTodos()
+    {
+      var funcionarios = FuncionarioRepository.ObterTodos();
+      return Ok(funcionarios);
+    }
+
     [HttpPost]
     public IActionResult Adicionar([FromBody] FuncionarioDto funcionario)
     {
@@ -26,11 +33,29 @@ namespace RH.Controller
       return StatusCode(StatusCodes.Status201Created);
     }
 
-    [HttpDelete]
-    public void Excluir(Funcionario funcionario)
+    [Authorize(Roles = "Adm, Gerente")]
+    [HttpDelete("excluir-funcionario/{id}")]
+    public IActionResult ExcluirFuncionario([FromRoute] string id)
     {
+      var funcionario = FuncionarioRepository.ObterPorId(id);
+      if (funcionario.Permissao == Enums.Permissoes.Adm || funcionario.Permissao == Enums.Permissoes.Gerente)
+        return StatusCode(StatusCodes.Status401Unauthorized);
+
       FuncionarioRepository.Excluir(funcionario);
+      return NoContent();
     }
+
+
+    //  EXCLUIR GERENTE
+    [Authorize(Roles = "Adm")]
+    [HttpDelete("excluir-gerente/{id}")]
+    public IActionResult ExcluirGerente([FromRoute] string id)
+    {
+      var funcionario = FuncionarioRepository.ObterPorId(id);
+      FuncionarioRepository.Excluir(funcionario);
+      return NoContent();
+    }
+
 
 
   }
