@@ -26,7 +26,8 @@ namespace RH.Controller
       {
         Nome = funcionario.Nome,
         Senha = funcionario.Senha,
-        Salario = funcionario.Salario
+        Salario = funcionario.Salario,
+        Permissao = funcionario.Permissao
       };
 
       FuncionarioRepository.Adicionar(novoFuncionario);
@@ -56,18 +57,18 @@ namespace RH.Controller
       return NoContent();
     }
 
-    //   [Authorize(Roles = "Gerente")]
-    //   [HttpPut("alterar-salario/{id}")]
-    //   public IActionResult AlterarSalario(
-    //      [FromRoute] string id,
-    //      [FromBody] FuncionarioDto salario
-    //  )
-    //   {
-    //     var funcionario = FuncionarioRepository.ObterPorId(id);
-    //     funcionario.Salario = salario.Salario;
-    //     FuncionarioRepository.Editar(funcionario);
-    //     return Ok();
-    //   }
+    [Authorize(Roles = "Gerente")]
+    [HttpPut("alterar-salario/{id}")]
+    public IActionResult AlterarSalario(
+       [FromRoute] string id,
+       [FromBody] SalarioDto salario
+   )
+    {
+      var funcionarioSalario = FuncionarioRepository.ObterPorId(id);
+      funcionarioSalario.Salario = salario.Salario;
+      FuncionarioRepository.Editar(funcionarioSalario);
+      return Ok();
+    }
 
 
 

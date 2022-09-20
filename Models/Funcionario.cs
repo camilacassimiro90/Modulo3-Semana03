@@ -17,7 +17,7 @@ public class Funcionario
   }
   public Funcionario(FuncionarioDto funcionario)
   {
-    // Id = funcionario.Id;
+    Id = funcionario.Id;
     Nome = funcionario.Nome;
     Senha = funcionario.Senha;
     Salario = funcionario.Salario;

@@ -14,7 +14,7 @@ namespace RH.Repositories
      Nome = "Camila",
      Senha = "123",
      Salario = 50000m,
-     Permissao = Permissoes.Adm
+     Permissao = Permissoes.Gerente
 
     }
   };
@@ -44,7 +44,7 @@ namespace RH.Repositories
 
     }
 
-    public void Editar(Funcionario funcionario)
+    public static void Editar(Funcionario funcionario)
     {
       var funcionarioEd = funcionarioLista.Find(f => f.Id == funcionario.Id);
       funcionarioEd.Update(funcionario);
