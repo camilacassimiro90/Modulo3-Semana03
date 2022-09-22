@@ -30,11 +30,6 @@ namespace RH.Repositories
       return funcionario;
     }
 
-    public static Funcionario ObterPorUsuarioESenha(FuncionarioLoginDto funcionario)
-    {
-      return funcionarioLista.FirstOrDefault(f => f.Nome == funcionario.Nome && f.Senha == funcionario.Senha);
-    }
-
     public static Funcionario Adicionar(Funcionario funcionario)
     {
       funcionario.Id = Guid.NewGuid().ToString();
@@ -50,10 +45,20 @@ namespace RH.Repositories
       funcionarioEd.Update(funcionario);
     }
 
+    public bool ExisteFuncionario(Funcionario funcionario)
+    {
+      return funcionarioLista.Any(f => f.Nome == funcionario.Nome && f.Senha == funcionario.Senha);
+    }
+
     public static void Excluir(Funcionario funcionario)
     {
       var funcionario1 = ObterPorId(funcionario.Id);
       funcionarioLista.Remove(funcionario1);
+    }
+
+    public Funcionario ObterPorUsuarioESenha(FuncionarioLoginDto funcionario)
+    {
+      return funcionarioLista.FirstOrDefault(f => f.Nome == funcionario.Nome && f.Senha == funcionario.Senha);
     }
 
 

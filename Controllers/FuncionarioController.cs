@@ -69,10 +69,6 @@ namespace RH.Controller
       FuncionarioRepository.Editar(funcionarioSalario);
       return Ok();
     }
-
-
-
-
-
+    
   }
 }
