@@ -16,7 +16,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 // builder.Services.AddScoped<FuncionarioRepository, FuncionarioRepository>();
-builder.Services.AddScoped<IFuncionarioServico, FuncionarioServico>();
+// builder.Services.AddScoped<IFuncionarioServico, FuncionarioServico>();
 
 
 var key = Encoding.ASCII.GetBytes(Settings.Secret);
